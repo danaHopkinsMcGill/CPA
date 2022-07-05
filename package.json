@@ -1,0 +1,27 @@
+{
+  "name": "app03",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "auth": "^0.0.9",
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.6.0",
+    "connect-mongodb-session": "^3.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-router": "^0.0.1",
+    "express-session": "^1.17.3",
+    "express-sessions": "^1.0.6",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.4.1",
+    "morgan": "~1.9.1",
+    "sass-colors": "^1.0.14"
+  }
+}

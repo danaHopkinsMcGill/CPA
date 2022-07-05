@@ -1,0 +1,50 @@
+<h1> Daily Log</h1>
+
+
+
+</form>
+
+
+<table class="table table-bordered table-striped, table-info">
+    <style> 
+        table {
+            table-layout:fixed;
+            width: 310px;
+        }
+        table td{
+            width:110px;
+            word-wrap:break-word;
+        }
+    </style>
+    <thead>
+        <tr>
+            <th>Specie's name</th><th>url</th><th>comments</th><th>Created At</th><th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (logitem of logitems){%>
+            <tr>
+                <td><%= logitem.speciesName %> </td>
+                <td><%= logitem.url %> </td>
+                <td><%= logitem.comment %> </td>
+                <td><%= logitem.createdAt %> </td>
+                <td> <a href="/deleteDailyLogItem/<%= logitem.id %>"> delete</a></td>
+                
+                
+                 
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+<hr>
+<div class= "bg-light">
+<h3>Add new item</h3>
+<form method="post" action="/dailyLog">
+    <input type="text" name="speciesName"> - species name<br>
+    <input type="text" name="url"> - url <br>
+    comments:<br>
+    <textarea name="comment"></textarea><br>
+    <input type="submit">
+
+</form>
+</div> 

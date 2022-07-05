@@ -1,0 +1,13 @@
+
+
+<% for(breed of breeds.message){%> 
+   
+    <br>
+    <img width="100" src="<%= breed %>" alt="dog photo" > 
+    <hr>
+<% } %>
+
+
+<pre>
+    <%= JSON.stringify(breeds,null,5)%> 
+</pre>
