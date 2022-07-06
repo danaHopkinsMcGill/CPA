@@ -25,7 +25,7 @@
         <% for (logitem of logitems){%>
             <tr>
                 <td><%= logitem.speciesName %> </td>
-                <td><%= logitem.url %> </td>
+                <td> <a href= "<%= logitem.url %>"> <%= logitem.url %> </a> </td>
                 <td><%= logitem.comment %> </td>
                 <td><%= logitem.createdAt %> </td>
                 <td> <a href="/deleteDailyLogItem/<%= logitem.id %>"> delete</a></td>
