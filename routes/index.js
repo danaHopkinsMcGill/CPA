@@ -19,5 +19,10 @@ router.get('/bio',
      res.render('login')
    }
   )
+  router.get('/work',
+   (req,res,next) => {
+     res.render('work')
+   }
+  )
 
 module.exports = router;
