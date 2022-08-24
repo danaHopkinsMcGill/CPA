@@ -18,8 +18,8 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 
 const mongoose = require( 'mongoose' );
 //const mongodb_URI = 'mongodb://localhost:27017/cs103a_todo'
-//const mongodb_URI = 'mongodb+srv://cs_sj:BrandeisSpr22@cluster0.kgugl.mongodb.net/DHM?retryWrites=true&w=majority' //this is what u have commented when ur not doing local host
-const mongodb_URI = process.env.mongodb_URI
+const mongodb_URI = 'mongodb+srv://cs_sj:BrandeisSpr22@cluster0.kgugl.mongodb.net/DHM?retryWrites=true&w=majority' //this is what u have commented when ur not doing local host
+//const mongodb_URI = process.env.mongodb_URI
 
 mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true} );
 // fix deprecation warnings
