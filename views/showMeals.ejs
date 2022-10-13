@@ -1,13 +1,20 @@
-<h1>Show Meals containing <%= ingredient %></h1>
-
-
+<h1>Show Meals by Letter </h1>
+<div class=" bg-info" >
 <% for(meal of meals){%> 
     <h2><%= meal.strMeal %></h2>
     <br>
-    <img width="100" src="<%= meal.strMealThumb %>" alt="meal photo" >
-    <hr>
+    <p> category: <%=meal.strCategory %></p>
+    <br>
+   
+    <br>
+    <div class = "col-md-4"> 
+        <img width="300" src="<%= meal.strMealThumb %>" alt="meal photo" > 
+        <h3 class = "text-center">Instructions </h3>
+        <p class="text-center"> <%= meal.strInstructions %></p>  
+    </div>
+  
+
 <% } %>
 
-<% if (meals.length==0) {%>
-<h3>No meals found</h3>
-<% } %>
+</div>
+<pre><%= JSON.stringify(meals[0],null,5) %> </pre>

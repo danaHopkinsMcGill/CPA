@@ -89,11 +89,11 @@ app.get('/meals',(req,res,next) => {
 
 app.post('/meals',
   async (req,res,next) => {
-    const ingredient = req.body.ingredient;
-    const url="https://www.themealdb.com/api/json/v1/1/filter.php?i="+ingredient
+    const letter = req.body.letter;
+    const url="https://www.themealdb.com/api/json/v1/1/search.php?f="+ letter
     const response = await axios.get(url)
     console.dir(response.data)
-    res.locals.ingredient = ingredient
+    res.locals.letter = letter
     res.locals.meals = response.data.meals || []
     res.render('showMeals')
   })
