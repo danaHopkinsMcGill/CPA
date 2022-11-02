@@ -1,20 +1,30 @@
 <h1>Show Meals by Letter </h1>
-<div class=" bg-info" >
+<style>
+    body{
+        background-color:darkseagreen;
+    }
+    img {
+    
+        float: center;
+        margin-right: 40px;
+    }
+</style>
 <% for(meal of meals){%> 
+    <br>
     <h2><%= meal.strMeal %></h2>
-    <br>
+    
     <p> category: <%=meal.strCategory %></p>
-    <br>
+    
    
-    <br>
-    <div class = "col-md-4"> 
+    <div>
         <img width="300" src="<%= meal.strMealThumb %>" alt="meal photo" > 
-        <h3 class = "text-center">Instructions </h3>
-        <p class="text-center"> <%= meal.strInstructions %></p>  
-    </div>
+        <h3 > Instructions </h3>
+         <%= meal.strInstructions %> </div>
   
 
 <% } %>
+<br>
 
-</div>
+
+
 <!-- <pre><%= JSON.stringify(meals[0],null,5) %> </pre> -->
